@@ -1,4 +1,4 @@
-Learning Rails
+Learning Ruby on Rails
 ==
 
-Learning Rails with a tutorial from the RailsApps project.
+Learning Ruby on Rails with a tutorial from the RailsApps project.
