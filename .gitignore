@@ -17,3 +17,6 @@
 
 # An example .gitignore file from the RailsApps project. 
 # https://github.com/RailsApps/rails-composer/blob/master/files/gitignore.txt
+
+# Ignore application configuration
+/config/application.yml
