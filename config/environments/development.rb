@@ -27,6 +27,14 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Adds additional error checking when serving assets at runtime.
+  # Checks for improperly declared sprockets dependencies.
+  # Raises helpful error messages.
+  config.assets.raise_runtime_errors = true
+
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
+
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com"
     port: 587
@@ -37,11 +45,6 @@ Rails.application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
 
-  # Adds additional error checking when serving assets at runtime.
-  # Checks for improperly declared sprockets dependencies.
-  # Raises helpful error messages.
-  config.assets.raise_runtime_errors = true
-
-  # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
+  # Send email in development mode.
+  config.action_mailer.perform_deliveries = true  
 end
