@@ -20,14 +20,16 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Turbolinks makes following links in your web application faster. 
+# Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 #gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+# Spring speeds up development by keeping your application running in the background. 
+# Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
@@ -71,4 +73,15 @@ group :development do
 	gem 'quiet_assets'
 	# Generates files for an application layout
 	gem 'rails_layout'
+end
+group :production do
+	# Heroku doesn't support SQLite database; the company provides a PostgreSQL database.
+	gem 'pg'
+	# On Heroku, Rails 4.0 needs an extra gem to handle logging and serve CSS and 
+	# JavaScript assets.
+	gem 'rails_12factor'
+	# Note that Heroku recommends Unicon for handling higher level of traffic efficiently.
+	# Unicorn can be difficult to set up and configure, so we're using Thin for our tutorial
+	# application.
+	gem 'thin'
 end
