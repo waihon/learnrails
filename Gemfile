@@ -7,8 +7,6 @@ ruby '2.1.1'
 gem 'rails', '4.1.1'
 
 # Rails defaults
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -67,6 +65,8 @@ gem 'simple_form'
 # Front-end framework
 gem 'zurb-foundation'
 group :development do
+	# Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
 	# Helps when things go wrong
 	gem 'better_errors'
 	# Suppresses distracting messages in the log
